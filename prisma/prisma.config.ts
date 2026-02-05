@@ -1,15 +1,12 @@
-import path from 'node:path'
-import type { PrismaConfig} from '@prisma/client'
+import 'dotenv/config'
+import { defineConfig, env } from 'prisma/config'
 
-export default {
-    earlyAccess: true,
-    schema: path.join(__dirname, 'prisma', 'schema.prisma'),
-
-    migrate: {
-        async development() {
-            return {
-                url: process.env.DATABASE_URL!
-            }
-        }
-    }
-} satisfies PrismaConfig
+export default defineConfig({
+    schema: 'prisma/schema.prisma',
+    migrations: {
+        path: 'prisma/migrations',
+    },
+    datasource: {
+        url: env('DATABASE_URL'),
+    },
+})
