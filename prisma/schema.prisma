@@ -39,7 +39,7 @@ model User {
   createdAt DateTime  @default(now()) @db.Timestamp(6)
   updatedAt DateTime  @updatedAt @db.Timestamp(6)
   Account   Account[]
-  Session       Session[]
+  Session   Session[]
 }
 
 model Account {

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import loader from '../../assets/loader.gif'
 
 const LoadingPage = () => {
     return (
@@ -9,7 +10,7 @@ const LoadingPage = () => {
             height: '100vh',
             width: '100vw',
         }}>
-        <Image src={'/loader.gif'} alt={'loading...'} width={150} height={150}/>
+        <Image src={loader} alt={'loading...'} width={150} height={150}/>
         </div>
     );
 }

@@ -7,6 +7,7 @@ import {Sheet, SheetContent, SheetDescription, SheetTitle, SheetTrigger} from "@
 const Menu = () => {
     return (
         <div className={"flex justify-end gap-3"}>
+
             <nav className={"hidden md:flex gap-1 w-full max-w-xs"}>
                 <ModeToggle/>
                 <Button asChild variant={"ghost"}>
@@ -20,6 +21,7 @@ const Menu = () => {
                     </Link>
                 </Button>
             </nav>
+
             <nav className={"md:hidden flex gap-1"}>
                 <Sheet>
                     <SheetTrigger className={"align-middle"}>
